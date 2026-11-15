@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102322">
+  <title>Current — Video.js Skin</title>
+  <script type="module" crossorigin src="./assets/index-Dvq5zM3m.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-ZYu__x1W.css">
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <div class="brand"><span class="mark" aria-hidden="true"></span> Current</div>
+      <span>Video.js skin</span>
+    </header>
+    <div class="intro">
+      <div>
+        <p class="medium">Silent nature footage</p>
+        <h1>Forest waterfall</h1>
+      </div>
+      <p class="credit"><a href="https://www.pexels.com/video/river-flowing-in-the-forest-8191323/">Film by Roman Odintsov</a></p>
+    </div>
+
+    <video-player content-title="Forest waterfall">
+      <media-container class="skin" aria-label="Forest waterfall video player">
+        <div class="screen">
+          <video src="./waterfall.mp4" poster="./assets/poster-JG5D2gG2.webp" preload="metadata" playsinline></video>
+        </div>
+
+        <media-controls class="deck" aria-label="Playback controls">
+          <div class="transport">
+            <media-play-button title="Play or pause">
+              <span class="play-state" aria-hidden="true"><i class="play-icon"></i></span>
+              <span class="pause-state" aria-hidden="true"><i class="pause-icon"></i></span>
+            </media-play-button>
+            <div class="timeline">
+              <div class="timecode">
+                <media-time type="current"></media-time>
+                <span aria-hidden="true">/</span>
+                <media-time type="duration"></media-time>
+              </div>
+              <media-time-slider>
+                <media-slider-track>
+                  <media-slider-buffer></media-slider-buffer>
+                  <media-slider-fill></media-slider-fill>
+                </media-slider-track>
+                <media-slider-thumb></media-slider-thumb>
+              </media-time-slider>
+            </div>
+            <div class="sound" role="group" aria-label="Audio controls">
+              <media-mute-button title="Mute or unmute"><span class="speaker" aria-hidden="true"><i></i></span></media-mute-button>
+              <media-volume-slider>
+                <media-slider-track><media-slider-fill></media-slider-fill></media-slider-track>
+                <media-slider-thumb></media-slider-thumb>
+              </media-volume-slider>
+            </div>
+            <media-fullscreen-button title="Toggle fullscreen"><span class="corners" aria-hidden="true"></span></media-fullscreen-button>
+          </div>
+        </media-controls>
+
+        <media-hotkey keys="Space" action="togglePaused"></media-hotkey>
+        <media-hotkey keys="m" action="toggleMuted"></media-hotkey>
+        <media-hotkey keys="f" action="toggleFullscreen"></media-hotkey>
+        <media-hotkey keys="ArrowLeft" action="seekStep" value="-5"></media-hotkey>
+        <media-hotkey keys="ArrowRight" action="seekStep" value="5"></media-hotkey>
+        <media-status-announcer></media-status-announcer>
+        <media-error-dialog>
+          <media-dialog-popup class="error">
+            <media-dialog-title></media-dialog-title>
+            <media-dialog-description></media-dialog-description>
+            <media-dialog-close>Close</media-dialog-close>
+          </media-dialog-popup>
+        </media-error-dialog>
+      </media-container>
+    </video-player>
+    <footer class="key-guide"><kbd>Space</kbd> Play/Pause <kbd>←</kbd> <kbd>→</kbd> Seek <kbd>F</kbd> Fullscreen</footer>
+  </main>
+</body>
+</html>
+
+
+
